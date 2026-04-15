@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+        <style> 
+h1{
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+
+    </head>
+    <body>
+        <h1>Functions</h1>
+        <p id="functions"></p>
+        <h2>Parameters</h2>
+        <p id="parameters"></p>
+        <h2>Buttons</h2>
+        <button id="showus" onclick="showus()">We-4</button>
+        <h2>Default Parameters</h2>
+        <p id="addd"></p>
+        <h2>Expression</h2>
+        <p id="expression"></p>
+        <h2>Arrow Function</h2>
+        <p id="arrow"></p>
+
+
+        <script>
+            //function
+            function name(){
+                return "We-4";
+            }
+            document.getElementById("functions").innerHTML = name();
+
+            //parameters
+            function sum(n){
+                let sum=0;
+                for(let i=0;i<n;i++){
+                    sum+=i;
+                }
+                return sum;
+            }
+            let n=5;
+            let result=sum(n);
+            document.getElementById("parameters").innerHTML = "The sum of first "+n+" natural numbers is: "+result;
+
+            //buttons
+            function showus(){
+               const we4=["Rohan","Hari Nikesh","Keerthana","Sindhu"];
+               let text="";
+                for(let i=0;i<we4.length;i++){
+                     text+=we4[i]+"<br>";
+                }
+                document.getElementById("showus").innerHTML=text;
+            }
+
+            ///default parameters
+            /*function add(a,b=5){
+                return a+b;
+            }
+            let sum=add(5);
+            document.getElementById("addd").innerHTML =  sum;*/
+
+            // return 
+function add(a,b){
+    return a+b;
+}   
+let addition = add(5,10);
+document.getElementById("addd").innerHTML = addition;
+
+//expression
+let nam=function(a){
+    return a+" is a part of us";
+}
+let result1=nam("Rohan");
+document.getElementById("expression").innerHTML = result1;
+
+//arrow function
+let them=(a,b)=>{
+    return a+" and "+b+" are the two pillars of we-4";
+
+}
+let result2=them("Rohan","Hari Nikesh");
+document.getElementById("arrow").innerHTML = result2;
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
