@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays in JavaScript</title>
+        <style>
+            h1{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            p{
+                padding: 25px;
+                font-size: 25px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Arrays in JavaScript</h1>
+        <h2>Arrays</h2>
+        <p id="new_array"></p>
+        <h2>Accessing Array Elements</h2>
+        <p id="access_array"></p>
+        <h2>Modifying Array Elements</h2>
+        <p id="modify_array"></p>
+        <h2>Array Length</h2>
+        <p id="array_length"></p>
+        <h1>Array Methods</h1>
+        <h2>toString()</h2>
+        <p id="to_string"></p>
+        <h2>at()</h2>
+        <p id="at_method"></p>
+        <h2>push()</h2>
+        <p id="push_method"></p>
+        <h2>pop()</h2>
+        <p id="pop_method"></p>
+        <h2>shift()</h2>
+        <p id="shift_method"></p>
+        <h2>Array.isArray()</h2>
+        <p id="is_array"></p>
+        <h2>concat()</h2>
+        <p id="concat_method"></p>
+        <h2>splice()</h2>
+        <p id="splice_method"></p>
+        <h2>slice()</h2>
+        <p id="slice_method"></p>
+        <h2>indexOf()</h2>
+        <p id="index_of"></p>
+        <h2>find()</h2>
+        <p id="find_method"></p>
+        <h2>sort()</h2>
+        <p id="sort_method"></p>
+        <h2>reverse()</h2>
+        <p id="reverse_method"></p>
+        <h2>filter()</h2>
+        <p id="filter_method"></p>
+        <h2>map()</h2>
+        <p id="map_method"></p>
+        <h2>reduce()</h2>
+        <p id="reduce_method"></p>
+        <h2>some()</h2>
+        <p id="some_method"></p>
+        <h2>every()</h2>
+        <p id="every_method"></p>
+        <script>
+            const we4=["Rohan","Hari Nikesh","Keerthana","Sindhu"];
+            document.getElementById("new_array").innerHTML += we4 + "<br>";
+            //accessing array elements
+            document.getElementById("access_array").innerHTML += we4[0] + "<br>"; 
+            document.getElementById("access_array").innerHTML += we4[1] + "<br>";
+            document.getElementById("access_array").innerHTML += we4[2] + "<br>"; 
+            document.getElementById("access_array").innerHTML += we4[3] + "<br>"; 
+
+            //modifying array elements
+            we4[we4.length]="no one";
+            document.getElementById("modify_array").innerHTML += we4 + "<br>";
+
+            //array length
+            document.getElementById("array_length").innerHTML += "Length of array is " + we4.length + "<br>";   
+
+            //toString() method
+            document.getElementById("to_string").innerHTML += we4.toString() + "<br>";
+
+            //at() method
+            document.getElementById("at_method").innerHTML += we4.at(0) + "<br>";
+            document.getElementById("at_method").innerHTML += we4.at(1) + "<br>";
+
+            //push() method
+            we4.push("Epaphra");
+            document.getElementById("push_method").innerHTML += we4 + "<br>";
+
+            //pop() method
+            we4.pop();
+            document.getElementById("pop_method").innerHTML += we4 + "<br>";
+
+            //shift() method
+            we4.shift();
+            document.getElementById("shift_method").innerHTML += we4 + "<br>";
+
+            //Array.isArray() method
+            document.getElementById("is_array").innerHTML += Array.isArray(we4) + "<br>";
+
+            const num=new Array(1,2,3,4);
+            //concat() method
+            const new_array=num.concat(we4);
+            document.getElementById("concat_method").innerHTML += new_array + "<br>";
+
+            //splice() method
+            we4.splice(2,1,"Indhumathi");
+            document.getElementById("splice_method").innerHTML += we4 + "<br>";
+
+            //slice() method
+            const sliced_array=we4.slice(0,3);
+            document.getElementById("slice_method").innerHTML += sliced_array + "<br>";
+
+            //indexOf() method
+            document.getElementById("index_of").innerHTML += we4.indexOf("Indhumathi") + "<br>";    
+
+            //find() method
+            const numbers=[1,2,3,4,5];
+            const found_number=numbers.find(myfunction);
+            function myfunction(value){
+                return value>3;
+            }   
+            document.getElementById("find_method").innerHTML += found_number + "<br>";
+
+            //sort() method
+            document.getElementById("sort_method").innerHTML += we4.sort() + "<br>";
+
+            //reverse() method
+            document.getElementById("reverse_method").innerHTML += we4.reverse() + "<br>";
+
+            const num1=[24,52,4,56,1,12];
+            //filter() method
+            const new_num1=num1.filter(myFunction1);
+            function myFunction1(value){
+                return value>10;
+            }
+            document.getElementById("filter_method").innerHTML += new_num1 + "<br>";
+
+            //map() method
+            const new_num2=num1.map(myFunction2);
+            function myFunction2(value){
+                return value*2;
+            }
+            document.getElementById("map_method").innerHTML += new_num2 + "<br>";
+
+            //reduce() method
+            const sum=num1.reduce(myFunction3); 
+            function myFunction3(total,value){
+                return total+value;
+            }
+            document.getElementById("reduce_method").innerHTML += sum + "<br>";
+
+            //some() method
+            const some_num=num1.some(myFunction4);
+            function myFunction4(value){
+                return value>50;
+            }
+            document.getElementById("some_method").innerHTML += some_num + "<br>";
+
+            //every() method
+            const every_num=num1.every(myFunction5);    
+            function myFunction5(value){
+                return value>0;
+            }
+            document.getElementById("every_method").innerHTML += every_num + "<br>";
+        
+        </script>
+    </body>
