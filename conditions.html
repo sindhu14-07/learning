@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>Conditions</title> 
+<style>
+    h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }   
+</style>
+    </head>
+    <body>
+        <h1>Conditioal Statements</h1>
+        <h2>if statement</h2>
+        <p id="if-statement"></p>
+        <h2>if-else statement</h2>
+        <p id="if-else-statement"></p>
+        <h2>if-else if statement</h2>
+        <p id="if-else-if-statement"></p>
+        <h2>switch statement</h2>
+        <p id="switch-statement"></p>
+<script>
+    let age = 18;
+    if(age >= 18){
+        document.getElementById("if-statement").innerHTML = "You are eligible for voting";
+    }
+    //if-else statement
+    if(age < 18){
+        document.getElementById("if-else-statement").innerHTML = "You are not eligible for voting";
+    }
+    else{
+        document.getElementById("if-else-statement").innerHTML = "You are eligible for voting";
+    }   
+    //if-else if statement
+let marks = 85;
+if(marks >= 90){    
+    document.getElementById("if-else-if-statement").innerHTML = "Grade: A";
+}
+else if(marks >= 80){
+    document.getElementById("if-else-if-statement").innerHTML = "Grade: B";
+}
+else if(marks >= 70){
+    document.getElementById("if-else-if-statement").innerHTML = "Grade: C";
+}
+else if(marks >= 60){
+    document.getElementById("if-else-if-statement").innerHTML = "Grade: D";
+}   
+else{
+    document.getElementById("if-else-if-statement").innerHTML = "Grade: F";
+}
+
+//switch statement
+let day = 3;
+switch(day){
+    case 1:
+        document.getElementById("switch-statement").innerHTML = "Monday";
+        break;  
+    case 2:
+        document.getElementById("switch-statement").innerHTML = "Tuesday";
+        break;
+    case 3:
+        document.getElementById("switch-statement").innerHTML = "Wednesday";
+        break;
+    case 4:
+        document.getElementById("switch-statement").innerHTML = "Thursday";
+        break;
+    case 5:
+        document.getElementById("switch-statement").innerHTML = "Friday";   
+        break;
+    case 6:
+        document.getElementById("switch-statement").innerHTML = "Saturday"; 
+        break;
+    default:
+        document.getElementById("switch-statement").innerHTML = "Invalid day";
+}
+
+    </script>
+    </body>
+</html>

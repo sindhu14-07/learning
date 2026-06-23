@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>DOM manipulation</head>
+    <style>
+        h1{
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+    </style>
+    <body>
+        <h1>DOM manipulation</h1>
+        <h2>Selecting elements</h2>
+        <h3>Selecting Elements by ID</h3>
+        <p id="by_id">I'm studying Computer Science Engineering</p>
+        <h3>Selecting Elements by Class Name</h3>
+        <p class="by_class">I'm studying Mathematics</p>    
+        <p class="by_class">I'm studying Physics</p>
+        <h3>Selecting Elements by Tag Name</h3>
+        <p>I'm studying Chemistry</p>
+        <p>I'm studying English</p>
+        <p id="by_tag"></p>
+        <h3>Selecting Elements by Query Selector</h3>
+        <p class="query"></p>
+        <h2>Changing styles</h2>
+        <p id="p1">Hari Nikesh</p>
+        <p id="p2">rohan</p>
+        <p id="p3">keerthana</p>
+        <p id="p4">sindhu</p>        
+        <script>
+            const elementById = document.getElementById("by_id");
+            document.getElementById("by_id").innerHTML = elementById.innerHTML + " at Kongu engineering college";
+            const elementsByClassName = document.getElementsByClassName("by_class");
+            document.getElementsByClassName("by_class")[0].innerHTML = elementsByClassName[0].innerHTML + " at Kongu engineering college";
+            document.getElementsByClassName("by_class")[1].innerHTML = elementsByClassName[1].innerHTML + " at Kongu engineering college";
+            const elementsByTagName = document.getElementsByTagName("p");
+            document.getElementById("by_tag").innerHTML = elementsByTagName[0].innerHTML;
+            const elementByQuerySelector = document.querySelector(".query");
+            document.querySelector(".query").innerHTML = "I'm studying Computer Science Engineering at Kongu engineering college";  
+
+            //changing styles
+
+           
+            document.getElementById("git p1").style.color = "red";
+            document.getElementById("p2").style.fontSize = "20px";
+            document.getElementById("p3").style.fontFamily = "Arial, Helvetica, sans-serif";
+            <button id="p4" onclick="changeColor()">Change Color</button>
+            function changeColor(){
+                document.getElementById("p4").style.color = "blue";
+            }   
+
+
+
+        </script>
+    </body>  
+      </html>

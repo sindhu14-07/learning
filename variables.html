@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            p{
+                padding: 25px;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Variables In JavaScript</h1>
+        <p>Variables can be declared using let, const, or var</p>
+        <h2>Using let</h2>
+        <p id="variable"></p>
+        <h2>Using const</h2>
+        <p id="const-variable"></p>
+        <h2>Using var</h2>
+        <p id="var-variable"></p>
+
+
+        <script>
+            //using let
+            let x=5;
+            let y=6;
+            document.getElementById("variable").innerHTML+= x+y + "<br>";
+            //a variable declared using let cannot be redeclared within the same scope
+            let a=10;
+            {
+                let a=20;
+                document.getElementById("variable").innerHTML +=a + "<br>";
+            }
+            document.getElementById("variable").innerHTML += a+ "<br>";
+            /* In the above code variable a is declared twice , but in different scope(global, functional)*/
+            //const
+            const pi=3.14;
+            let radius=5;
+            document.getElementById("const-variable").innerHTML += 2*pi + "<br>";
+            document.getElementById("const-variable").innerHTML += "Area of circle " + pi*radius*radius + "<br>";
+
+            //using var
+            var color="black";
+            var color;
+            document.getElementById("var-variable").innerHTML += color + "<br>";
+/* Here var can be used without declaring but in let and const a variable cannot be used before declaratinon. */
+        </script>
+
+
+
+
+    </body>
+</html>

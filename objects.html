@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head> <title>Objects</title>
+<style>
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    </style>
+    </head>
+    <body>
+        <h1>Objects</h1>
+        <h2>Object Example</h2>
+        <p id="object-example"></p>
+        <h2>Empty Object</h2>
+        <p id="empty-object"></p>
+        <h2>Object with 'new' Keyword</h2>
+        <p id="new-keyword"></p>
+        <h2>Accessing Properties</h2>
+        <p id="accessing-properties"></p>
+        <h2>Deleting Properties</h2>
+        <p id="deleting-properties"></p>
+        <h2>Nested Objects</h2>
+        <p id="nested-object"></p>
+        <h2>Object Methods</h2>
+        <p id="object-methods"></p>
+        <h2>Adding Method to Object</h2>
+        <p id="method-to-object"></p>
+        <h2>Object Constructor</h2> 
+        <p id="object-constructor"></p>
+<script>
+    const person={
+        name: "Sindhu",
+        age:19,
+        city:"Erode"
+    };
+    document.getElementById("object-example").innerHTML = "Name: " + person.name + "<br>" + "Age: " + person.age + "<br>" + "City: "+ person.city;
+    //empty object
+    
+    const car = {};
+    car.make = "Toyota";
+    car.model = "Camry";
+    car.year = 2020;
+    document.getElementById("empty-object").innerHTML += "<br><br>Car: " + car.make + " " + car.model + " (" + car.year + ")";    
+
+    //using new keyword
+    const student = new Object({
+        name: "Keerthana",
+        age: 20,
+        course: "Computer Science"
+    });
+    document.getElementById("new-keyword").innerHTML += "<br><br>Student: " + student.name + ", Age: " + student.age + ", Course: " + student.course;
+
+    //accessing object properties
+    document.getElementById("accessing-properties").innerHTML += person.name;
+    document.getElementById("accessing-properties").innerHTML += "<br>" + person["age"];
+
+    //deleting
+    const del=delete person.city;
+    document.getElementById("deleting-properties").innerHTML += "City property deleted: " + del;
+
+    //nested objects
+    const team={
+        name: "We-4 HRKS",
+        members: {
+            member1: "Hari Nikesh",
+            member2: "Rohan",
+            member3: "Keerthana",
+            member4: "Sindhu"
+        }
+    }
+    document.getElementById("nested-object").innerHTML+=team.members.member1+"<br>";
+    document.getElementById("nested-object").innerHTML+=team.members["member2"]+"<br>";
+    document.getElementById("nested-object").innerHTML+=team["members"]["member3"]+"<br>";
+
+    //object methods
+    const myfav={
+        color: "blue",
+        place: "finland",
+        book:"twisted love",
+        myself: function(){
+            return "I like "+this.color+" color";
+        }
+    }
+    document.getElementById("object-methods").innerHTML+=myfav.myself()+"<br>";
+    document.getElementById("object-methods").innerHTML+=myfav.myself;
+
+    //adding methd to object
+    myfav.hobby=function(){
+        return "I like reading books";
+    }
+    document.getElementById("method-to-object").innerHTML+=myfav.hobby();
+
+    //object constructor
+    function Person(name,age,city){
+        this.name=name;
+        this.age=age;
+        this.city=city;
+    }
+    const person1=new Person("Sindhu",19,"Erode");
+    document.getElementById("object-constructor").innerHTML+=person1.name+", Age: "+person1.age+", City: "+person1.city;
+
+</script>
+    </body>
+</html>
+
+

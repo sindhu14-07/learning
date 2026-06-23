@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Iteration</title>
+        <style>
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#for-loop{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+#for-id{
+    text-align: left;
+    margin-top: 20px;
+    text-decoration: underline;
+    
+}
+.iteration{
+    
+    border-style: solid;
+    border-width: 3px;
+    background-color: lightblue;
+    padding: 20px;
+    margin-right: 1100px;
+}
+.while{
+    margin-left: 20px;
+    border-style: solid;
+    border-width: 3px;
+    background-color: lightgreen;
+    margin-top: 30px;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding: 20px;
+}
+#while-loop{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
+#while-id{
+    text-align: center;
+    text-decoration: underline;
+}
+.do-while{
+    
+    border-style: solid;
+    border-width: 3px;
+    background-color: lightpink;
+   text-align: right;
+    padding: 20px;
+     margin-top: 30px;
+    margin-left: 1100px;
+    
+}
+#do-while-loop{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: right;
+    
+}
+#do-while-id{
+    text-align: right;
+    text-decoration: underline;  
+}
+
+    
+        </style>
+    </head>
+    <body>
+        <h1>Iteration</h1>
+        <div class="iteration">
+<h2 id="for-id"> For Loop</h2>
+<p id="for-loop"></p>
+        </div>
+
+<div class="while">
+<h2 id="while-id"> While Loop</h2>
+<p id="while-loop"></p>
+</div>
+
+<div class="do-while">
+<h2 id="do-while-id"> Do While Loop</h2>
+<p id="do-while-loop"></p>
+</div>
+
+<h2 id="break-id"> Break</h2>   
+<p id="break"></p>
+
+<h2 id="continue-id"> Continue</h2>
+<p id="continue"></p>
+</div>
+<script>
+    //for loop
+    const we4=["Rohan","Hari Nikesh","Keerthana","Sindhu"];
+    let text="";
+    for(let i=0;i<we4.length;i++){
+        text+=we4[i]+"<br>";
+    }
+    document.getElementById("for-loop").innerHTML=text;
+
+    //while loop
+    const we4_birth=["06-03-2001","10-10-2001","13-04-2007","14-03-2007"];
+    let text1="";
+    let j=0;
+    while(j<we4_birth.length){
+        text1+=we4_birth[j]+"<br>";
+        j++;
+    }
+    document.getElementById("while-loop").innerHTML=text1;
+
+    //do while loop
+    const we4_stupids=["Innocent","super waste","waste","great"];
+    let text2="";
+    let k=0;
+    do{
+        text2+=we4_stupids[k]+"<br>";
+        k++;
+    }while(k<we4_stupids.length);
+    document.getElementById("do-while-loop").innerHTML=text2;
+
+    //break
+    const we4_break=["Rohan","Hari Nikesh","Keerthana","Sindhu"];
+    let text3="";
+    for(let l=0;l<we4_break.length;l++){
+        if(we4_break[l]==="Hari Nikesh"){
+            break;
+        }
+        text3+=we4_break[l]+"<br>";
+    }
+    document.getElementById("break").innerHTML=text3;
+
+    //continue
+    const we4_continue=["Rohan","Hari Nikesh","Keerthana","Sindhu"];
+    let text4="";   
+    for(let m=0;m<we4_continue.length;m++){
+        if(we4_continue[m]==="Hari Nikesh"){
+            continue;
+        }
+        text4+=we4_continue[m]+"<br>";
+    }
+    document.getElementById("continue").innerHTML=text4;
+
+
+
+
+
+</script>
+
+        </body>
+</html>

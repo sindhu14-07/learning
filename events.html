@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            button {
+                margin: 5px 0;
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            input {
+                padding: 10px;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            form {
+                margin-top: 20px;
+            }
+            h1{
+                text-align:center;
+                font-family:Arial, Helvetica, sans-serif
+            }
+            </style>
+    </head>
+    <body>
+        <h1>Events</h1>
+        <p>This is a simple page about events.</p>
+        <h2>Click Event</h2>
+        <button id="click-event">We4
+        </button>
+        <p id="click-print"></p>
+        <button id="hari">Hari Nikesh</button>
+        <p id="hari-print"></p>
+        <button id="rohan">Rohan</button>
+        <p id="rohan-print"></p>
+        <h2>Input Event</h2>
+        <input type="text" id="input-field" placeholder="Type something...">
+        <p id="input-print"></p>
+        <h2>Form Event</h2>
+        <form id="my-form">
+            <input type="text" name="username" id="username" placeholder="Username"><br/><br/>
+            <input type="email" name="email" id="email" placeholder="Email"><br/><br/>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-print"></p>
+        <script>
+            document.getElementById("click-event").addEventListener("click",() =>{
+                const para=document.getElementById("click-print");
+                if(para.textContent===""){
+                para.textContent="we4 consist of Hari Nikesh, Rohan, Keerthana and Sindhu. When it was started there's no idea it would become in the way I ever imagined. Now it's a part of my daily life where I dont search for peace in some other places."
+                }else{
+                    para.textContent="";
+                }
+            });
+            document.getElementById("hari").addEventListener("click",() =>{
+                const para=document.getElementById("hari-print");
+                if(para.textContent===""){
+                para.textContent="Hari Nikesh is a man with good soul and the one who inspires everyone. If we come to know about him, we'll wonder how could be a man like him still exist in the world."
+                }else{
+                    para.textContent="";
+                }
+            });
+            document.getElementById("rohan").addEventListener("click",() =>{
+                const para=document.getElementById("rohan-print");
+                if(para.textContent===""){
+                para.textContent="Rohan...The man who is here to irritate me. But he is my punching bag. Shows that kutty kutty pasam sometimes. When you ask about him before 5months, I'll submit the white sheet but now additional sheets are not enough to fill."
+                }else{
+                    para.textContent="";
+                }
+            });
+            const input=document
+            input.addEventListener("input",() =>{
+                const para=document.getElementById("input-print");
+                para.textContent=input.value;
+            });
+            const form=document.getElementById("my-form");
+            form.addEventListener("submit",(event) =>{
+                event.preventDefault();
+                const username=document.getElementById("username").value;
+                const email=document.getElementById("email").value;
+                const para=document.getElementById("form-print");
+                para.textContent=`Username: ${username}, Email: ${email}`;
+            });
+        </script>
+    </body>
+</html>

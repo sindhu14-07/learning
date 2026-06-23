@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Operators</title>
+<style>
+    h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    #arithmetic-operators{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+    }
+    #assignment-operators{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+    }
+    #comparison-operators{
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+    }
+</style>
+    </head>
+
+    <body>
+        <h1>Operators</h1>
+        <h2>Arithmetic Operators</h2>
+        <p id="arithmetic-operators"></p>
+        <h2>Assignment Operators</h2>
+        <p id="assignment-operators"></p>
+        <h2>Comparison Operators</h2>
+        <p id="comparison-operators"></p>
+        <script>
+            //addition
+            let a = 10;
+            let b = 5;  
+            let sum = a + b;
+            document.getElementById("arithmetic-operators").innerHTML += "Addition: " + sum + "<br>";
+            //subtraction
+            let sub = a - b;
+            document.getElementById("arithmetic-operators").innerHTML += "Subtraction: " + sub + "<br>";
+            //multiplication
+            let mul = a * b;
+            document.getElementById("arithmetic-operators").innerHTML += "Multiplication: " + mul + "<br>";
+            //division
+            let div = a / b;
+            document.getElementById("arithmetic-operators").innerHTML += "Division: " + div + "<br>";
+            //modulus
+            let mod = a % b;
+            document.getElementById("arithmetic-operators").innerHTML += "Modulus: " + mod + "<br>";
+            //exponentiation
+            let expo=a ** b;
+            document.getElementById("arithmetic-operators").innerHTML += "Exponentiation: " + expo;
+        //increment
+        document.getElementById("arithmetic-operators").innerHTML += "Increment: " + a++ + "<br>";
+        //decrement 
+        document.getElementById("arithmetic-operators").innerHTML += "Decrement: " + b-- + "<br>";
+
+        //assignment operators
+        let x = 10;
+        document.getElementById("assignment-operators").innerHTML += "Initial value of x: " + x + "<br>";
+        //addition assignment
+        x += 5;
+        document.getElementById("assignment-operators").innerHTML += "After addition assignment (x += 5): " + x + "<br>";
+        //subtraction assignment
+        x -= 3;
+        document.getElementById("assignment-operators").innerHTML += "After subtraction assignment (x -= 3): " + x + "<br>";
+        //multiplication assignment
+        x *= 2;
+        document.getElementById("assignment-operators").innerHTML += "After multiplication assignment (x *= 2): " + x + "<br>";
+        //division assignment
+        x /= 4;
+        document.getElementById("assignment-operators").innerHTML += "After division assignment (x /= 4): " + x + "<br>";
+        //modulus assignment
+        x %= 3;
+        document.getElementById("assignment-operators").innerHTML += "After modulus assignment (x %= 3): " + x + "<br>";
+
+        //comparison operators
+        let s=10;
+        let y=20;
+        //==
+        document.getElementById("comparison-operators").innerHTML += "s == y : " + (s == y) + "<br>";
+//===
+        document.getElementById("comparison-operators").innerHTML += "s === y : " + (s === y) + "<br>";
+//!=
+        document.getElementById("comparison-operators").innerHTML += "s != y : " + (s != y) + "<br>";
+//!==
+        document.getElementById("comparison-operators").innerHTML += "s !== y : " + (s !== y) + "<br>";
+//>
+        document.getElementById("comparison-operators").innerHTML += "s > y : " + (s > y) + "<br>";
+//<
+        document.getElementById("comparison-operators").innerHTML += "s < y : " + (s < y) + "<br>";
+//>=    
+        document.getElementById("comparison-operators").innerHTML += "s >= y : " + (s >= y) + "<br>";
+//<=
+        document.getElementById("comparison-operators").innerHTML += "s <= y : " + (s <= y) + "<br>";
+
+        </script>
+    </body>
+</html>
